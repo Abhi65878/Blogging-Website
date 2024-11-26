@@ -1,0 +1,354 @@
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.top {
+  background-color: #fff;
+  color: #333;
+}
+
+.top .darkModeToggle {
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.top .darkModeToggle i {
+  color: #333;
+}
+
+.top.dark .darkModeToggle i {
+  color: #fff;
+}
+
+body.dark-theme {
+  background-color: #222;
+  color: #f9f9f9;
+}
+
+.top.dark {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+
+.top {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  font-family: "Josefin Sans", serif;
+  z-index: 999;
+}
+
+.topLeft .topIcon {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.topLeft .topIcon:hover {
+  color: #0073e6;
+}
+
+.topLeft,.topRight {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topCenter {
+  flex: 6;
+}
+
+.topCenter .topList {
+  display: flex;
+  list-style: none;
+}
+
+.topCenter .topListItem {
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.topCenter .topListItem:hover,
+.topCenter .topListItem.active {
+  color: #0073e6;
+  font-weight: bold;
+}
+
+ .topIcon {
+   font-size: 18px;
+   margin-right: 10px;
+   cursor: pointer;
+   transition: color 0.3s ease;
+ }
+
+ .topIcon:hover {
+   color: #aaa;
+ }
+
+.topImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+
+}
+
+.topList {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+.topListItem {
+  margin-right: 15px;
+  font-size: 16px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.topSearchIcon {
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+  margin-left: 12px;
+  
+}
+
+.topRight .topProfile {
+  position: relative;
+  cursor: pointer;
+}
+
+.topRight .topImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.topRight .topImg:hover {
+  transform: scale(1.1);
+}
+
+.topMenuIcon {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.topMenuIcon:hover {
+  color: #0073e6;
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  padding: 15px;
+}
+
+.mobileMenu .topList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobileMenu .topListItem {
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.mobileMenu .topListItem a {
+  text-decoration: none;
+  color: #333;
+}
+
+.mobileMenu .topListItem:hover {
+  color: #0073e6;
+  background-color: #eef3f4;
+  border-radius: 5px;
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.dropdownMenu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 100px;
+  padding: 0.5rem 0;
+}
+
+.dropdownMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdownMenu ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dropdownMenu ul li:hover {
+  background-color: #f0f0f0;
+}
+
+.topSearch {
+  position: relative;
+}
+
+.topSearchIcon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.topSearchIcon:hover {
+  color: #0073e6;
+}
+
+.searchInput {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.topSearchIcon:focus+.searchInput,
+.searchInput:focus {
+  width: 150px;
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .topCenter {
+    display: flex;
+    align-items: center;
+  }
+
+  .topList {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menuToggle {
+    display: block;
+    color: #444;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.topLeft,
+.topRight {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.topRight {
+  justify-content: flex-end;
+}
+
+.topMenuIcon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  z-index: 1000;
+}
+
+.mobileMenu .topList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.mobileMenu .topListItem {
+  padding: 10px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.mobileMenu .topListItem:hover {
+  background-color: #f0f0f0;
+}
+
+.topSearchIcon {
+  font-size: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+} */

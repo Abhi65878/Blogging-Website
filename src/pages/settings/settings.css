@@ -1,0 +1,456 @@
+/* .settings {
+  display: flex;
+}
+
+.settingsWrapper {
+  flex: 9;
+  padding: 20px;
+}
+
+.settingsTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settingsUpdateTitle {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: rgb(6, 6, 6);
+}
+
+.settingsDeleteTitle {
+  color: red;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.settingsPP {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.settingsPP > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.settingsPPIcon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: lightcoral;
+  color: wheat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.settingsForm > label {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.settingsForm > input {
+  color: gray;
+  margin: 10px 0;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+
+.settingsSubmit {
+  width: 120px;
+  align-self: center;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: teal;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+} */
+
+
+
+/* General Settings Styles */
+/* .settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+}
+
+.settingsWrapper {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.settingsTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.settingsUpdateTitle,
+.settingsDeleteTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #34495e;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.settingsUpdateTitle:hover {
+  color: #00c4cc;
+}
+
+.settingsDeleteTitle:hover {
+  color: #e74c3c;
+}
+
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1266b9;
+}
+
+.label-- {
+  font-family: "Varela Round", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: black;
+}
+
+.label-input {
+  background-color: #e6e9ed;
+  color: black;
+  margin-right: 80px;
+}
+
+input {
+  border: 1px solid #dcdfe6;
+  border-radius: 5px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: #95989b;
+  background-color: #dcdfe6;
+  transition: border 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #00c4cc;
+  box-shadow: 0 0 4px rgba(0, 196, 204, 0.5);
+}
+
+.settingsPP {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.settingsPP img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00c4cc;
+  transition: transform 0.3s ease-in-out;
+}
+
+.settingsPP img:hover {
+  transform: scale(1.1);
+}
+
+.settingsPPIcon {
+  font-size: 1.5rem;
+  color: #00c4cc;
+  cursor: pointer;
+}
+
+.settingsSubmit {
+  font-family: "Varela Round", serif;
+  font-weight: 300;
+  width: fit-content;
+  margin-left: 160px;
+  padding: 0.8rem 2rem;
+  background-color: #34495e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+
+  width: 80%;
+  max-width: 400px;
+  padding: 1rem;
+  margin: 1rem auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.settingsSubmit:hover {
+  background-color: #3dd3d8;
+  transform: scale(1.05);
+}
+
+.feedbackMessage {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #e74c3c;
+  text-align: center;
+}
+
+.deleteConfirmOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.deleteConfirmBox {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.deleteConfirmBox p {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.deleteConfirmBox button {
+  padding: 0.8rem 1.5rem;
+  margin: 0 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s ease;
+}
+
+.deleteConfirmBox button:first-child {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.deleteConfirmBox button:first-child:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+.deleteConfirmBox button:last-child {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.deleteConfirmBox button:last-child:hover {
+  background-color: #229954;
+  transform: scale(1.05);
+} */
+
+
+
+/* General Settings */
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.settings:hover{
+  transform: scale(1.02);
+}
+
+.settingsWrapper {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+/* Title Section */
+.settingsTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.settingsUpdateTitle,
+.settingsDeleteTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #486480;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.settingsUpdateTitle:hover {
+  color: #00c4cc;
+}
+
+.settingsDeleteTitle:hover {
+  color: #e74c3c;
+}
+
+/* Form Styles */
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1266b9;
+}
+
+.label-input {
+  border: 1px solid #dcdfe6;
+  border-radius: 5px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: #95989b;
+  background-color: #dcdfe6;
+}
+
+.label-input:focus {
+  outline: none;
+  border-color: #00c4cc;
+  box-shadow: 0 0 4px rgba(0, 196, 204, 0.5);
+}
+
+/* Profile Picture Section */
+.settingsPP {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.settingsPP img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00c4cc;
+}
+
+.settingsPPIcon {
+  font-size: 1.5rem;
+  color: #00c4cc;
+  cursor: pointer;
+}
+
+.hiddenFileInput {
+  display: none;
+}
+
+/* Submit Button */
+.settingsSubmit {
+  background-color: #34495e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.settingsSubmit:hover {
+  background-color: #3dd3d8;
+  transform: scale(1.05);
+}
+
+/* Feedback Message */
+.feedbackMessage {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #e74c3c;
+  text-align: center;
+}
+
+/* Delete Confirmation Overlay */
+.deleteConfirmOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deleteConfirmBox {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.deleteConfirmBox button {
+  margin: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.deleteConfirmBox button:first-child {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.deleteConfirmBox button:last-child {
+  background-color: #27ae60;
+  color: white;
+}
