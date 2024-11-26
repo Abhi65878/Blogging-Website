@@ -12,7 +12,11 @@ export default function Sidebar() {
     <div>
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT Us</span>
-        <img className="sidebarImg" src="Img\unnamed.png" alt="" />
+        <img
+          className="sidebarImg"
+          src="src\assets\Img\unnamed.png"
+          alt=""
+        />
         <div className="sidebar-border">
           {/* <p className="sidebar-content"> */}
           <h3 className="sidebar-margin"> Welcome to NeuformBlog!</h3>
