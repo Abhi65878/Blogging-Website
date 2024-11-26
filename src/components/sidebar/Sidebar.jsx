@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import unnamed from '/src/assets/Img/unnamed.png'
 import "./sidebar.css";
 
 export default function Sidebar() {
@@ -14,7 +15,7 @@ export default function Sidebar() {
         <span className="sidebarTitle">ABOUT Us</span>
         <img
           className="sidebarImg"
-          src="src\assets\Img\unnamed.png"
+          src={unnamed}
           alt=""
         />
         <div className="sidebar-border">
