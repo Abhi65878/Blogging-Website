@@ -2,13 +2,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./settings.css";
+import Profile_Image from "/src/assets/Img/Profile_Image.jpg"
 
 export default function Settings() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [profilePicture, setProfilePicture] = useState(
-    "Img\\peacock_profile_514065.jpg"
+    Profile_Image
   );
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [feedback, setFeedback] = useState("");

@@ -1,4 +1,5 @@
 import './header.css'
+import Home_Image from "/src/assets/Img/Home_Image.jpg";
 
 export default function Header() {
   return (
@@ -9,7 +10,7 @@ export default function Header() {
       </div>
       <img
         className="headerImg"
-        src="src\assets\Img\arnel-hasanovic-MNd-Rka1o0Q-unsplash.jpg"
+        src={Home_Image}
         alt=""
       />
     </div>
